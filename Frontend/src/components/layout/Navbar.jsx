@@ -13,6 +13,14 @@ const links = [
   { to: '/gibs', label: 'GIBS', icon: Earth },
   { to: '/epic', label: 'EPIC', icon: Camera },
   { to: '/donki', label: 'DONKI', icon: Cloudy },
+  { to: '/cneos', label: 'CNEOS', icon: Rocket },
+  { to: '/exoplanet', label: 'Exoplanet', icon: Telescope },
+  { to: '/osdr', label: 'OSDR', icon: Earth },
+  // { to: '/ssc', label: 'SSC', icon: Satellite },
+  { to: '/techport', label: 'Techport', icon: Rocket },
+  { to: '/tech-transfer', label: 'Tech Transfer', icon: Rocket },
+  { to: '/tle-api', label: 'TLE API', icon: Orbit },
+  // { to: '/vesta', label: 'Vesta', icon: Rocket },
 ]
 
 function NavItem({ to, label, end, icon: Icon, onClick }) {
@@ -53,28 +61,21 @@ export default function Navbar() {
               <span>Explorer</span>
             </NavLink>
 
-            {/* Desktop nav */}
-            <nav className="hidden sm:flex items-center gap-1">
-              {links.map((link) => (
-                <NavItem key={link.to} {...link} />
-              ))}
-            </nav>
-
-            {/* Mobile toggle */}
+            {/* Menu toggle */}
             <button
               type="button"
               aria-label={open ? 'Fechar menu' : 'Abrir menu'}
               onClick={() => setOpen(!open)}
-              className="sm:hidden inline-flex items-center justify-center rounded-xl border border-white/10 p-2 text-white/60 hover:text-white hover:bg-white/[0.06] transition duration-200"
+              className="inline-flex items-center justify-center rounded-xl border border-white/10 p-2 text-white/60 hover:text-white hover:bg-white/[0.06] transition duration-200"
             >
               {open ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Menu */}
         {open && (
-          <div className="sm:hidden border-t border-white/[0.06] bg-black/90 px-4 py-3 space-y-1">
+          <div className="border-t border-white/[0.06] bg-black/90 px-4 py-3 space-y-1">
             {links.map((link) => (
               <NavItem key={link.to} {...link} onClick={() => setOpen(false)} />
             ))}
