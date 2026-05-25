@@ -1,9 +1,16 @@
 export default function DONKIpage() {
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
-      <div className="text-center">
-        <h1 className="text-2xl font-semibold text-white">DONKI</h1>
-        <p className="text-white/40 text-sm mt-2">Clima espacial</p>
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
+      <h1 className="text-2xl font-semibold text-white mb-8 text-center">DONKI — Space Weather Database Of Notifications, Knowledge, Information</h1>
+
+      <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
+
+        <div className="flex-1">
+        </div>
+
+        <div className="flex-1">
+          <p className="text-white/40 text-lg">Fornece registros de eventos relacionados ao clima espacial, como explosões solares, tempestades geomagnéticas e ejeções de massa coronal. É utilizada para monitorar atividades solares que podem impactar satélites, sistemas de comunicação e missões espaciais.</p>
+        </div>
       </div>
     </div>
   )

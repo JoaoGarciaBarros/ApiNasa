@@ -1,9 +1,16 @@
 export default function TechTransferPage() {
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
-      <div className="text-center">
-        <h1 className="text-2xl font-semibold text-white">Tech Transfer</h1>
-        <p className="text-white/40 text-sm mt-2">NASA's Technology Transfer Portal</p>
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
+      <h1 className="text-2xl font-semibold text-white mb-8 text-center">TechTransfer</h1>
+
+      <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
+
+        <div className="flex-1">
+        </div>
+
+        <div className="flex-1">
+          <p className="text-white/40 text-lg">Disponibiliza acesso a patentes, softwares e relatórios tecnológicos produzidos pela NASA, promovendo transferência de conhecimento e reutilização de tecnologias em aplicações acadêmicas, industriais e científicas.</p>
+        </div>
       </div>
     </div>
   )
