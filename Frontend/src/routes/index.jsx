@@ -4,6 +4,7 @@ import APODPage from '../pages/APOD'
 import AsteroidsPage from '../pages/Asteroids'
 import CNEOSPage from '../pages/CNEOS'
 import DONKIpage from '../pages/DONKI'
+import EONETPage from '../pages/EONET'
 import EPICPage from '../pages/EPIC'
 import ExoplanetPage from '../pages/Exoplanet'
 import GIBSPage from '../pages/GIBS'
@@ -26,6 +27,7 @@ export default function AppRoutes() {
         <Route path="/asteroids" element={<AsteroidsPage />} />
         <Route path="/cneos" element={<CNEOSPage />} />
         <Route path="/donki" element={<DONKIpage />} />
+        <Route path="/eonet" element={<EONETPage />} />
         <Route path="/epic" element={<EPICPage />} />
         <Route path="/exoplanet" element={<ExoplanetPage />} />
         <Route path="/gibs" element={<GIBSPage />} />
