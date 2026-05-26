@@ -1,6 +1,6 @@
 # How to run
 
-    nnstall react
+    install react
     cmd /c "cd frontend && npm install"      
 
     Run Front

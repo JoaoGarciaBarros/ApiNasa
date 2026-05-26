@@ -8,8 +8,11 @@ export default function OpenScienceDataRepositorPage() {
         <div className="flex-1">
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">Oferece acesso programático a conjuntos de dados científicos disponibilizados pela NASA dentro da iniciativa de ciência aberta. A plataforma reúne informações utilizadas em pesquisas, experimentos e estudos acadêmicos.</p>
+          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+            Testar OSDR
+          </button>
         </div>
       </div>
     </div>

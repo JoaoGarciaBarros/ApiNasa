@@ -8,8 +8,11 @@ export default function TLEAPIPage() {
         <div className="flex-1">
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">Fornece dados orbitais de objetos artificiais que orbitam a Terra utilizando o padrão TLE (Two-Line Element). Esses dados são utilizados para rastreamento e previsão da posição de satélites e outros corpos em órbita.</p>
+          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+            Testar TLE API
+          </button>
         </div>
       </div>
     </div>

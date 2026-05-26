@@ -8,8 +8,11 @@ export default function TechportPage() {
         <div className="flex-1">
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">Permite consultar projetos tecnológicos desenvolvidos e financiados pela NASA. A plataforma reúne informações sobre pesquisas, inovação tecnológica, desenvolvimento científico e aplicações futuras ligadas ao setor aeroespacial.</p>
+          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+            Testar TechPort
+          </button>
         </div>
       </div>
     </div>

@@ -8,8 +8,11 @@ export default function SatelliteSituationCenterPage() {
         <div className="flex-1">
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">Fornece informações sobre localização e posicionamento geocêntrico de satélites e espaçonaves, permitindo analisar sua relação com regiões geofísicas e condições espaciais ao redor da Terra.</p>
+          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+            Testar SSC
+          </button>
         </div>
       </div>
     </div>

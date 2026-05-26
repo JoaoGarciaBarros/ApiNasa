@@ -8,8 +8,11 @@ export default function CNEOSPage() {
         <div className="flex-1">
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">Disponibiliza dados relacionados à dinâmica orbital de corpos do Sistema Solar e ao monitoramento de objetos próximos da Terra. A API é utilizada para cálculos orbitais, previsões de trajetória e estudos de risco astronômico.</p>
+          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+            Testar SSD/CNEOS
+          </button>
         </div>
       </div>
     </div>
