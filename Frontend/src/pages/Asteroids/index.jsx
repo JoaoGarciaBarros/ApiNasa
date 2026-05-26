@@ -251,7 +251,7 @@ export default function AsteroidsPage() {
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O endpoint Feed fornece uma lista de objetos próximos da Terra dentro de um intervalo de datas definido pelo usuário. Os resultados incluem informações sobre aproximações previstas, velocidade relativa, distância e características físicas dos asteroides registrados no período consultado.</p>
           <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
-            Testar NEO - Feed
+            Testar NeoWS
           </button> 
         </div>
       </div>
@@ -271,7 +271,7 @@ export default function AsteroidsPage() {
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O endpoint Lookup permite consultar informações detalhadas de um objeto específico utilizando seu identificador oficial da NASA. A resposta apresenta dados completos do asteroide, incluindo dimensões estimadas, histórico de aproximações e informações orbitais.</p>
           <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
-            Testar NEO - Lookup
+            Testar NeoWS
           </button>
         </div>
         
@@ -299,7 +299,7 @@ export default function AsteroidsPage() {
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O endpoint Browse disponibiliza uma listagem ampla de objetos próximos da Terra cadastrados na base NeoWs. Essa funcionalidade permite explorar o catálogo geral de asteroides monitorados pela NASA, facilitando navegação e análise dos dados disponíveis.</p>
           <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
-            Testar NEO - Browse
+            Testar NeoWS
           </button>
         </div>
         
