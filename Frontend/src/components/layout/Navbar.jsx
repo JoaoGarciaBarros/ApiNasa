@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Menu, X, House, Telescope, Orbit, Sun, Globe, Earth, Atom, Satellite, Thermometer, Images, Database, Radar, Cpu, FlaskConical, SatelliteDish,} from 'lucide-react'
+import { Menu, X, House, Telescope, Orbit, Sun, Globe, Earth, Atom, Satellite, Thermometer, Images, Database, Radar, Cpu, FlaskConical, SatelliteDish, Rocket } from 'lucide-react'
 
 import nasaimg from '../../assets/nasa.png'
 
@@ -9,19 +9,19 @@ const links = [
   { to: '/apod', label: 'APOD', icon: Telescope },
   { to: '/asteroids', label: 'Asteroids', icon: Orbit  },
   { to: '/donki', label: 'DONKI', icon: Sun },
-  // { to: '/eonet', label: 'EONET', icon: Globe },
+  { to: '/eonet', label: 'EONET', icon: Globe },
   { to: '/epic', label: 'EPIC', icon: Earth },
   { to: '/exoplanet', label: 'Exoplanet', icon: Atom },
   { to: '/gibs', label: 'GIBS', icon: Satellite },
   { to: '/insight', label: 'Insight', icon: Thermometer },
   { to: '/image-library', label: 'Image Library', icon: Images },
   { to: '/osdr', label: 'OSDR', icon: Database },
-  // { to: '/ssc', label: 'SSC', icon: Satellite },
+  { to: '/ssc', label: 'SSC', icon: Satellite },
   { to: '/cneos', label: 'CNEOS', icon: Radar },
   { to: '/techport', label: 'Techport', icon: Cpu },
   { to: '/tech-transfer', label: 'Tech Transfer', icon: FlaskConical },
   { to: '/tle-api', label: 'TLE API', icon: SatelliteDish },
-  // { to: '/vesta', label: 'Vesta', icon: Rocket },
+  { to: '/vesta', label: 'Vesta', icon: Rocket },
 ]
 
 function NavItem({ to, label, end, icon: Icon, onClick }) {

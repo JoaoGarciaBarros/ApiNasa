@@ -12,11 +12,11 @@ import Home from '../pages/Home'
 import ImageLibraryPage from '../pages/ImageLibrary'
 import InsightPage from '../pages/insight'
 import OSDRpage from '../pages/OpenScienceDataRepositor'
-// import SSCpage from '../pages/SatelliteSituationCenter'
+import SSCpage from '../pages/SatelliteSituationCenter'
 import Techportpage from '../pages/Techport'
 import TechTransferpage from '../pages/TechTransfer'
 import TLEAPIPage from '../pages/TLEAPI'
-// import VestaPage from '../pages/Vesta'
+import VestaPage from '../pages/Vesta'
 
 
 export default function AppRoutes() {
@@ -35,11 +35,11 @@ export default function AppRoutes() {
         <Route path="/image-library" element={<ImageLibraryPage />} />
         <Route path="/insight" element={<InsightPage />} />
         <Route path="/osdr" element={<OSDRpage />} />
-        {/* <Route path="/ssc" element={<SSCpage />} /> */}
+        <Route path="/ssc" element={<SSCpage />} />
         <Route path="/techport" element={<Techportpage />} />
         <Route path="/tech-transfer" element={<TechTransferpage />} />
         <Route path="/tle-api" element={<TLEAPIPage />} />
-        {/* <Route path="/vesta" element={<VestaPage />} /> */}
+        <Route path="/vesta" element={<VestaPage />} />
       </Routes>
     </Layout>
   )

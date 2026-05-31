@@ -231,7 +231,7 @@ export default function AsteroidsPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
       <h1 className="text-2xl font-semibold text-white mb-8 text-center">Asteroids NeoWs — Near Earth Object Web Service</h1>
-      <h2 className="text-center text-xl font-medium text-white shrink-0 flex-1">O NeoWs é uma API da NASA voltada ao monitoramento de objetos próximos da Terra, como asteroides e cometas. A plataforma disponibiliza informações astronômicas detalhadas, incluindo tamanho estimado, velocidade, distância de aproximação e classificação de risco potencial, permitindo acompanhar e explorar corpos celestes monitorados pela agência.</h2>
+      <h2 className="text-center text-xl font-medium text-white shrink-0 flex-1">A NeoWs foi criada para tornar públicos os dados sobre asteroides próximos da Terra monitorados pela NASA. O sistema reúne informações como órbita, velocidade, tamanho estimado e aproximações previstas, permitindo acompanhar objetos potencialmente relevantes para pesquisa e defesa planetária. A API existe para facilitar o acesso a dados que antes ficavam concentrados em centros astronômicos especializados, sendo usada em painéis espaciais, estudos acadêmicos e ferramentas de monitoramento.</h2>
       {/* NEO - Feed */}
       <div className="w-full max-w-4xl flex items-center gap-4 mt-12 mb-4">
         <div className="flex-1 h-px bg-white/15"></div>
@@ -249,7 +249,7 @@ export default function AsteroidsPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O endpoint Feed fornece uma lista de objetos próximos da Terra dentro de um intervalo de datas definido pelo usuário. Os resultados incluem informações sobre aproximações previstas, velocidade relativa, distância e características físicas dos asteroides registrados no período consultado.</p>
+          <p className="text-white/40 text-lg">O Neo Feed é o modo principal da NeoWs e serve para listar asteroides próximos da Terra dentro de um intervalo de datas. Ele foi criado para facilitar o acompanhamento diário de objetos monitorados pela NASA, reunindo informações sobre aproximações previstas, tamanho estimado e nível de risco potencial. Em vez de pesquisar corpo por corpo, o Feed apresenta uma visão geral organizada dos objetos observados em determinado período.</p>
           <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar NeoWS
           </button> 
@@ -269,7 +269,7 @@ export default function AsteroidsPage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O endpoint Lookup permite consultar informações detalhadas de um objeto específico utilizando seu identificador oficial da NASA. A resposta apresenta dados completos do asteroide, incluindo dimensões estimadas, histórico de aproximações e informações orbitais.</p>
+          <p className="text-white/40 text-lg">O Neo Lookup existe para consultas individuais de asteroides já identificados pela NASA. Enquanto o Feed oferece listas, o Lookup permite aprofundar a análise de um objeto específico, trazendo dados orbitais, características físicas e registros de aproximações. Esse recurso é importante para pesquisadores e aplicações que precisam estudar ou exibir um asteroide em detalhes.</p>
           <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar NeoWS
           </button>
@@ -297,7 +297,7 @@ export default function AsteroidsPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O endpoint Browse disponibiliza uma listagem ampla de objetos próximos da Terra cadastrados na base NeoWs. Essa funcionalidade permite explorar o catálogo geral de asteroides monitorados pela NASA, facilitando navegação e análise dos dados disponíveis.</p>
+          <p className="text-white/40 text-lg">O Neo Browse funciona como um catálogo geral dos objetos próximos da Terra presentes no banco de dados da NASA. Seu objetivo é permitir navegação ampla pelo acervo sem depender de datas ou identificadores específicos. Ele é útil para exploração de dados, análise estatística e sistemas que precisam acessar grandes quantidades de registros astronômicos.</p>
           <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar NeoWS
           </button>
