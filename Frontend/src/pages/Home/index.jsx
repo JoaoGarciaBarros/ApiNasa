@@ -1,9 +1,5 @@
 import { Link } from 'react-router-dom'
-import {
-  Telescope, Orbit, Sun, Globe, Earth, Atom,
-  Satellite, Thermometer, Images, Database,
-  Radar, Cpu, FlaskConical, SatelliteDish, Rocket, Map
-} from 'lucide-react'
+import { Telescope, Orbit, Sun, Globe, Earth, Atom, Satellite, Thermometer, Images, Database, Radar, Cpu, FlaskConical, SatelliteDish, Rocket } from 'lucide-react'
 
 const apis = [
   {
