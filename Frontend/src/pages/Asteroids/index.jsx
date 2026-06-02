@@ -252,8 +252,8 @@ export default function AsteroidsPage() {
 
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Neo Feed é o modo principal da NeoWs e serve para listar asteroides próximos da Terra dentro de um intervalo de datas. Ele foi criado para facilitar o acompanhamento diário de objetos monitorados pela NASA, reunindo informações sobre aproximações previstas, tamanho estimado e nível de risco potencial. Em vez de pesquisar corpo por corpo, o Feed apresenta uma visão geral organizada dos objetos observados em determinado período.</p>
-          <button onClick={() => navigate('/asteroids/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
-            Testar NeoWS
+          <button onClick={() => navigate('/asteroids/feed')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+            Testar NeoWS Feed
           </button> 
         </div>
       </div>
@@ -272,8 +272,8 @@ export default function AsteroidsPage() {
 
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Neo Lookup existe para consultas individuais de asteroides já identificados pela NASA. Enquanto o Feed oferece listas, o Lookup permite aprofundar a análise de um objeto específico, trazendo dados orbitais, características físicas e registros de aproximações. Esse recurso é importante para pesquisadores e aplicações que precisam estudar ou exibir um asteroide em detalhes.</p>
-          <button onClick={() => navigate('/asteroids/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
-            Testar NeoWS
+          <button onClick={() => navigate('/asteroids/lookup')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+            Testar NeoWS Lookup
           </button>
         </div>
         
@@ -282,7 +282,7 @@ export default function AsteroidsPage() {
         </div>
 
       </div>
-      {/* NEO - Browse */}
+      
       <div className="w-full max-w-4xl flex items-center gap-4 mt-12 mb-4">
         <div className="flex-1 h-px bg-white/15"></div>
         
@@ -300,8 +300,8 @@ export default function AsteroidsPage() {
 
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Neo Browse funciona como um catálogo geral dos objetos próximos da Terra presentes no banco de dados da NASA. Seu objetivo é permitir navegação ampla pelo acervo sem depender de datas ou identificadores específicos. Ele é útil para exploração de dados, análise estatística e sistemas que precisam acessar grandes quantidades de registros astronômicos.</p>
-          <button onClick={() => navigate('/asteroids/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
-            Testar NeoWS
+          <button onClick={() => navigate('/asteroids/browse')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+            Testar NeoWS Browse
           </button>
         </div>
         

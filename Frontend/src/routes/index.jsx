@@ -19,14 +19,14 @@ import TLEAPIPage from '../pages/TLEAPI/index'
 import VestaPage from '../pages/Vesta/index'
 
 import APODTest from '../pages/APOD/test'
-import AsteroidsTest from '../pages/Asteroids/test'
-import CNEOSTest from '../pages/CNEOS/test'
-import DONKITest from '../pages/DONKI/test'
+import { AsteroidFeed, AsteroidLookup, AsteroidBrowse } from '../pages/Asteroids/test'
+import { CNEOSCAD, CNEOSFireball, CNEOSMissionDesign, CNEOSNHATS, CNEOSScout, CNEOSSentry } from '../pages/CNEOS/test'
+import { DONKICME, DONKICMEAnalysis, DONKIGST, DONKIIPS, DONKILFR, DONKISEP, DONKIMPC, DONKIRBE, DONKIHSS, DONKIWSA, DONKINotification } from '../pages/DONKI/test'
 import EONETTest from '../pages/EONET/test'
 import EPICTest from '../pages/EPIC/test'
 import ExoplanetTest from '../pages/Exoplanet/test'
 import GIBSTest from '../pages/GIBS/test'
-import ImageLibraryTest from '../pages/ImageLibrary/test'
+import { ImageLibrarySearch, ImageLibraryAsset, ImageLibraryMetadata, ImageLibraryCaptions } from '../pages/ImageLibrary/test'
 import InsightTest from '../pages/insight/test'
 import OSDRTest from '../pages/OpenScienceDataRepositor/test'
 import SSCTest from '../pages/SatelliteSituationCenter/test'
@@ -59,14 +59,34 @@ export default function AppRoutes() {
         <Route path="/vesta" element={<VestaPage />} />
 
         <Route path="/apod/test" element={<APODTest />} />
-        <Route path="/asteroids/test" element={<AsteroidsTest />} />
-        <Route path="/cneos/test" element={<CNEOSTest />} />
-        <Route path="/donki/test" element={<DONKITest />} />
+        <Route path="/asteroids/feed" element={<AsteroidFeed />} />
+        <Route path="/asteroids/lookup" element={<AsteroidLookup />} />
+        <Route path="/asteroids/browse" element={<AsteroidBrowse />} />
+        <Route path="/cneos/cad" element={<CNEOSCAD />} />
+        <Route path="/cneos/fireball" element={<CNEOSFireball />} />
+        <Route path="/cneos/mission-design" element={<CNEOSMissionDesign />} />
+        <Route path="/cneos/nhats" element={<CNEOSNHATS />} />
+        <Route path="/cneos/scout" element={<CNEOSScout />} />
+        <Route path="/cneos/sentry" element={<CNEOSSentry />} />
+        <Route path="/donki/cme" element={<DONKICME />} />
+        <Route path="/donki/analysis" element={<DONKICMEAnalysis />} />
+        <Route path="/donki/gst" element={<DONKIGST />} />
+        <Route path="/donki/ips" element={<DONKIIPS />} />
+        <Route path="/donki/lfr" element={<DONKILFR />} />
+        <Route path="/donki/sep" element={<DONKISEP />} />
+        <Route path="/donki/mpc" element={<DONKIMPC />} />
+        <Route path="/donki/rbe" element={<DONKIRBE />} />
+        <Route path="/donki/hss" element={<DONKIHSS />} />
+        <Route path="/donki/wsa" element={<DONKIWSA />} />
+        <Route path="/donki/notification" element={<DONKINotification />} />
         <Route path="/eonet/test" element={<EONETTest />} />
         <Route path="/epic/test" element={<EPICTest />} />
         <Route path="/exoplanet/test" element={<ExoplanetTest />} />
         <Route path="/gibs/test" element={<GIBSTest />} />
-        <Route path="/image-library/test" element={<ImageLibraryTest />} />
+        <Route path="/image-library/search" element={<ImageLibrarySearch />} />
+        <Route path="/image-library/asset" element={<ImageLibraryAsset />} />
+        <Route path="/image-library/metadata" element={<ImageLibraryMetadata />} />
+        <Route path="/image-library/captions" element={<ImageLibraryCaptions />} />
         <Route path="/insight/test" element={<InsightTest />} />
         <Route path="/osdr/test" element={<OSDRTest />} />
         <Route path="/ssc/test" element={<SSCTest />} />
