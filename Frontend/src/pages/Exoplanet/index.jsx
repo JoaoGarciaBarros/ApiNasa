@@ -1,4 +1,5 @@
 import JsonBlock from "../../components/ui/JsonBlock"
+import { useNavigate } from 'react-router-dom'
 
 const sampleExoplanet = `kepid,kepoi_name,kepler_name,koi_disposition,koi_pdisposition,koi_score,koi_fpflag_nt,koi_fpflag_ss,koi_fpflag_co,koi_fpflag_ec,koi_period,koi_period_err1,koi_period_err2,koi_time0bk,koi_time0bk_err1,koi_time0bk_err2,koi_impact,koi_impact_err1,koi_impact_err2,koi_duration,koi_duration_err1,koi_duration_err2,koi_depth,koi_depth_err1,koi_depth_err2,koi_prad,koi_prad_err1,koi_prad_err2,koi_teq,koi_teq_err1,koi_teq_err2,koi_insol,koi_insol_err1,koi_insol_err2,koi_model_snr,koi_tce_plnt_num,koi_tce_delivname,koi_steff,koi_steff_err1,koi_steff_err2,koi_slogg,koi_slogg_err1,koi_slogg_err2,koi_srad,koi_srad_err1,koi_srad_err2,ra_str,dec_str,koi_kepmag,koi_kepmag_err
 10797460,K00752.01,Kepler-227 b,CONFIRMED,CANDIDATE,1.0000,0,0,0,0,9.48803557,2.775e-05,-2.775e-05,170.53875,0.00216,-0.00216,0.146,0.318,-0.146,2.9575,0.0819,-0.0819,615.8,19.5,-19.5,2.26,0.26,-0.15,793.0,,,93.59,29.45,-16.65,35.80,1,q1_q17_dr25_tce,5455.00,81.00,-81.00,4.467,0.064,-0.096,0.9270,0.1050,-0.0610,19h27m44.22s,+48d08m29.9s,15.347,
@@ -127,6 +128,7 @@ const sampleExoplanet = `kepid,kepoi_name,kepler_name,koi_disposition,koi_pdispo
 5115978,K00823.01,,CANDIDATE,CANDIDATE,,0,0,0,0,1.028436523,7.05e-07,-7.05e-07,170.228582,0.00054,-0.00054,1.5734,0.2599,-0.3164,1.8606,0.034,-0.034,8098,127,-127,72.77,27.71,-8.6,1947.0,,,3400.48,3879.25,-1109.02,89.60,,,6228.00,183.00,-219.00,4.428,0.077,-0.272,0.9900,0.3770,-0.1170,19h44m01.68s,+40d17m43.5s,15.202,`
 
 export default function ExoplanetPage() {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
       <h1 className="text-2xl font-semibold text-white mb-8 text-center">Exoplanet Archive</h1>
@@ -139,7 +141,7 @@ export default function ExoplanetPage() {
 
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Exoplanet Archive é um grande banco de dados dedicado ao estudo de exoplanetas, planetas localizados fora do Sistema Solar. Mantido pela NASA, ele reúne descobertas confirmadas e informações derivadas de missões espaciais e observatórios astronômicos. A API existe para organizar e disponibilizar esse enorme volume de dados, permitindo consultas sobre características orbitais, estrelas hospedeiras e métodos de detecção. O sistema é essencial para pesquisa astronômica e desenvolvimento de ferramentas de análise planetária.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/exoplanet/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar Exoplanet Archive
           </button>
         </div>

@@ -1,4 +1,5 @@
 import JsonBlock from '../../components/ui/JsonBlock'
+import { useNavigate } from 'react-router-dom'
 
 const sampleTechTransfer = {
   "results": [
@@ -264,6 +265,7 @@ const sampleTechTransfer = {
 
 
 export default function TechTransferPage() {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
       <h1 className="text-2xl font-semibold text-white mb-8 text-center">TechTransfer</h1>
@@ -276,7 +278,7 @@ export default function TechTransferPage() {
 
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O TechTransfer existe para aproximar tecnologias criadas pela NASA do setor comercial e industrial. Muitas soluções desenvolvidas para exploração espacial possuem aplicações fora desse contexto, e o sistema organiza patentes, licenças e oportunidades de transferência tecnológica. A API facilita a descoberta dessas tecnologias e incentiva inovação derivada de pesquisa espacial, mostrando como avanços da NASA podem gerar impacto econômico e social.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/tech-transfer/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar TechTransfer
           </button>
         </div>

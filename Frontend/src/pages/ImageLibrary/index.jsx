@@ -1,4 +1,5 @@
 import JsonBlock from '../../components/ui/JsonBlock'
+import { useNavigate } from 'react-router-dom'
 
 const sampleSearch = {
   "collection": {
@@ -296,6 +297,7 @@ const sampleCaptions = {
 }
 
 export default function ImageLibraryPage() {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
       <h1 className="text-2xl font-semibold text-white mb-8 text-center">NASA Image and Video Library</h1>
@@ -314,7 +316,7 @@ export default function ImageLibraryPage() {
         </div>
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O pesquisar é o mecanismo de busca da biblioteca multimídia da NASA. Ele permite localizar imagens, vídeos e áudios usando palavras-chave e filtros, transformando décadas de material espacial em um acervo pesquisável e reutilizável.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/image-library/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar Image Library
           </button>
         </div>
@@ -330,7 +332,7 @@ export default function ImageLibraryPage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">Os ativos fornecem a estrutura completa de um item multimídia da NASA, reunindo versões disponíveis, arquivos relacionados e informações técnicas. Ele existe para facilitar acesso organizado a mídias que podem possuir diferentes formatos e resoluções.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/image-library/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar Image Library
           </button>
         </div>
@@ -352,7 +354,7 @@ export default function ImageLibraryPage() {
         </div>
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">Essa função retorna o local onde estão armazenados os metadados detalhados de um item da biblioteca. O objetivo é permitir acesso aprofundado a informações como autoria, descrição, contexto histórico e características do arquivo.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/image-library/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar Image Library
           </button>
         </div>
@@ -368,7 +370,7 @@ export default function ImageLibraryPage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">Esse Endpoint localiza arquivos de legendas associados a vídeos da NASA. Ela foi criada para ampliar acessibilidade e facilitar uso educacional ou internacional do conteúdo audiovisual produzido pela agência.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/image-library/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar Image Library
           </button>
         </div>

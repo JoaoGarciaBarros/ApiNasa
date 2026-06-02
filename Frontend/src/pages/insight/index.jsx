@@ -1,4 +1,5 @@
 import JsonBlock from "../../components/ui/JsonBlock"
+import { useNavigate } from 'react-router-dom'
 
 const sampleinsight = {
   "675": {
@@ -1851,6 +1852,7 @@ const sampleinsight = {
 }
 
 export default function InsightPage() {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
       <h1 className="text-2xl font-semibold text-white mb-8 text-center">Insight — Mars Weather Service API</h1>
@@ -1863,7 +1865,7 @@ export default function InsightPage() {
 
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">A InSight Mars Weather Service foi criada para divulgar os dados meteorológicos coletados pela missão InSight em Marte. O serviço reúne medições de temperatura, vento, pressão atmosférica e condições ambientais do planeta vermelho. Seu principal objetivo é transformar dados científicos da missão em informações acessíveis, permitindo acompanhar o clima marciano e apoiar pesquisas relacionadas à atmosfera e futuras missões humanas. Mesmo após o encerramento da missão, a API continua sendo uma importante fonte histórica sobre Marte.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/insight/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar Insight
           </button>
         </div>

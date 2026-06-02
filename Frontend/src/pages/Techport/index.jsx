@@ -1,4 +1,5 @@
 import JsonBlock from '../../components/ui/JsonBlock'
+import { useNavigate } from 'react-router-dom'
 
 const sampleTechPort = {
   "contacts": [
@@ -18,6 +19,7 @@ const sampleTechPort = {
 }
 
 export default function TechportPage() {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
       <h1 className="text-2xl font-semibold text-white mb-8 text-center">TechPort</h1>
@@ -30,7 +32,7 @@ export default function TechportPage() {
 
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Techport é o catálogo oficial de projetos tecnológicos financiados ou desenvolvidos pela NASA. Ele foi criado para documentar pesquisas, missões e tecnologias em andamento, permitindo acompanhar como recursos e inovação são aplicados dentro da agência. A API oferece acesso a informações sobre objetivos, equipes e evolução dos projetos, funcionando como uma vitrine da produção tecnológica da NASA e uma ferramenta de transparência institucional.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/techport/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar TechPort
           </button>
         </div>

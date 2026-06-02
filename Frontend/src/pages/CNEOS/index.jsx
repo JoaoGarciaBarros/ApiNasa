@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom'
+
 export default function CNEOSPage() {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
       <h1 className="text-2xl font-semibold text-white mb-8 text-center">SSD/CNEOS — Solar System Dynamics / Center for Near-Earth Object Studies</h1>
@@ -15,7 +18,7 @@ export default function CNEOSPage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O CAD registra aproximações de asteroides e cometas em relação à Terra e outros corpos do Sistema Solar. Ele existe para acompanhar encontros orbitais previstos e documentar distâncias, velocidades e datas relevantes, sendo uma ferramenta importante de defesa planetária e pesquisa orbital.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/cneos/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar SSD/CNEOS
           </button>
         </div>
@@ -32,7 +35,7 @@ export default function CNEOSPage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Fireball reúne dados sobre meteoros extremamente brilhantes detectados ao entrarem na atmosfera terrestre. O sistema documenta energia liberada, altitude e localização aproximada dos eventos, ajudando cientistas a estudar impactos atmosféricos e comportamento de pequenos corpos espaciais.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/cneos/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar SSD/CNEOS
           </button>
         </div>
@@ -49,7 +52,7 @@ export default function CNEOSPage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Mission Design é um conjunto de ferramentas voltado para planejamento orbital e trajetórias espaciais. Ele existe para apoiar estudos de missões, cálculo de manobras e análise de transferências entre corpos celestes. Diferente de APIs focadas em observação, essa área está ligada ao desenvolvimento e avaliação de caminhos espaciais possíveis.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/cneos/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar SSD/CNEOS
           </button>
         </div>
@@ -66,7 +69,7 @@ export default function CNEOSPage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O NHATS foi criado para identificar asteroides potencialmente acessíveis por missões humanas. O sistema avalia requisitos energéticos e viabilidade orbital para futuras explorações tripuladas, funcionando como um filtro de candidatos para estudos de missão.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/cneos/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar SSD/CNEOS
           </button>
         </div>
@@ -83,7 +86,7 @@ export default function CNEOSPage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Scout monitora objetos recém-descobertos que ainda possuem órbitas incertas e estima rapidamente possíveis trajetórias. Seu papel é fornecer avaliações iniciais de risco logo após a descoberta de um corpo, permitindo resposta científica rápida enquanto novas observações são realizadas.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/cneos/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar SSD/CNEOS
           </button>
         </div>
@@ -100,7 +103,7 @@ export default function CNEOSPage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Sentry é um sistema automatizado de monitoramento de impacto de longo prazo. Ele calcula continuamente probabilidades de colisão de objetos próximos da Terra e atualiza previsões conforme novos dados são coletados. Seu objetivo é manter vigilância permanente sobre riscos potenciais, servindo como um dos principais sistemas de defesa planetária da NASA.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/cneos/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar SSD/CNEOS
           </button>
         </div>

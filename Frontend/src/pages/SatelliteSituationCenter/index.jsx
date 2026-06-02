@@ -1,4 +1,5 @@
 import JsonBlock from "../../components/ui/JsonBlock"
+import { useNavigate } from 'react-router-dom'
 
 const sampleSSC = {
     "Result": [
@@ -865,6 +866,7 @@ const sampleSSC = {
 
 
 export default function SatelliteSituationCenterPage() {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
       <h1 className="text-2xl font-semibold text-white mb-8 text-center">Satellite Situation Center</h1>
@@ -877,7 +879,7 @@ export default function SatelliteSituationCenterPage() {
 
         <div className="flex-1 flex flex-col">
           <p className="text-white/40 text-lg">O Satellite Situation Center, conhecido como SSC, é uma plataforma voltada para localização e contexto orbital de satélites científicos. O sistema permite entender onde uma missão espacial estava em determinado momento e quais condições espaciais estavam presentes ao redor dela. Ele existe porque muitos experimentos dependem do contexto orbital para interpretação correta dos dados coletados. A API é bastante usada em heliosfísica e estudos ambientais espaciais.</p>
-          <button className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/ssc/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar SSC
           </button>
         </div>

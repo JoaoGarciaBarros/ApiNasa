@@ -1,5 +1,3 @@
-import '../../pages/pages.css'
-
 export default function JsonBlock({ data }) {
   const formatted = typeof data === 'string' ? data : JSON.stringify(data, null, 2)
 
