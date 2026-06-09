@@ -220,7 +220,7 @@ export default function TLEAPIPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">A TLE API fornece acesso a dados Two-Line Element, um formato utilizado para representar órbitas de satélites artificiais. Esses dados permitem calcular posição e trajetória orbital de objetos em torno da Terra. O serviço existe porque rastrear satélites é essencial para observação espacial, telecomunicações e análise orbital. A API simplifica o acesso a essas informações, sendo muito usada em simuladores, rastreadores e softwares astronômicos.</p>
+          <p className="text-white/60 text-lg">A TLE API fornece acesso a dados Two-Line Element, um formato utilizado para representar órbitas de satélites artificiais. Esses dados permitem calcular posição e trajetória orbital de objetos em torno da Terra. O serviço existe porque rastrear satélites é essencial para observação espacial, telecomunicações e análise orbital. A API simplifica o acesso a essas informações, sendo muito usada em simuladores, rastreadores e softwares astronômicos.</p>
           <button onClick={() => navigate('/tle-api/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar TLE API
           </button>

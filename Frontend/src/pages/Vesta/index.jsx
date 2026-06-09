@@ -33,7 +33,7 @@ export default function VestaPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O NASA Trek é uma plataforma de exploração cartográfica criada para visualizar superfícies planetárias e corpos celestes através de mapas interativos. Diferente de APIs focadas apenas em dados brutos, o Trek foi desenvolvido para navegação visual e análise geográfica de planetas e luas. Ele reúne imagens, topografia e camadas científicas de missões espaciais, permitindo estudar regiões específicas da Lua, Marte e outros corpos. O sistema é usado tanto em educação quanto em planejamento e pesquisa científica ligada à geologia planetária.</p>
+          <p className="text-white/60 text-lg">O NASA Trek é uma plataforma de exploração cartográfica criada para visualizar superfícies planetárias e corpos celestes através de mapas interativos. Diferente de APIs focadas apenas em dados brutos, o Trek foi desenvolvido para navegação visual e análise geográfica de planetas e luas. Ele reúne imagens, topografia e camadas científicas de missões espaciais, permitindo estudar regiões específicas da Lua, Marte e outros corpos. O sistema é usado tanto em educação quanto em planejamento e pesquisa científica ligada à geologia planetária.</p>
           <button 
             onClick={() => window.open('https://trek.nasa.gov/', '_blank')}
             className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">

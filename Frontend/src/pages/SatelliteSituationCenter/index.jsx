@@ -878,7 +878,7 @@ export default function SatelliteSituationCenterPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O Satellite Situation Center, conhecido como SSC, é uma plataforma voltada para localização e contexto orbital de satélites científicos. O sistema permite entender onde uma missão espacial estava em determinado momento e quais condições espaciais estavam presentes ao redor dela. Ele existe porque muitos experimentos dependem do contexto orbital para interpretação correta dos dados coletados. A API é bastante usada em heliosfísica e estudos ambientais espaciais.</p>
+          <p className="text-white/60 text-lg">O Satellite Situation Center, conhecido como SSC, é uma plataforma voltada para localização e contexto orbital de satélites científicos. O sistema permite entender onde uma missão espacial estava em determinado momento e quais condições espaciais estavam presentes ao redor dela. Ele existe porque muitos experimentos dependem do contexto orbital para interpretação correta dos dados coletados. A API é bastante usada em heliosfísica e estudos ambientais espaciais.</p>
           <button onClick={() => navigate('/ssc/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar SSC
           </button>

@@ -31,7 +31,7 @@ export default function TechportPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O Techport é o catálogo oficial de projetos tecnológicos financiados ou desenvolvidos pela NASA. Ele foi criado para documentar pesquisas, missões e tecnologias em andamento, permitindo acompanhar como recursos e inovação são aplicados dentro da agência. A API oferece acesso a informações sobre objetivos, equipes e evolução dos projetos, funcionando como uma vitrine da produção tecnológica da NASA e uma ferramenta de transparência institucional.</p>
+          <p className="text-white/60 text-lg">O Techport é o catálogo oficial de projetos tecnológicos financiados ou desenvolvidos pela NASA. Ele foi criado para documentar pesquisas, missões e tecnologias em andamento, permitindo acompanhar como recursos e inovação são aplicados dentro da agência. A API oferece acesso a informações sobre objetivos, equipes e evolução dos projetos, funcionando como uma vitrine da produção tecnológica da NASA e uma ferramenta de transparência institucional.</p>
           <button onClick={() => navigate('/techport/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar TechPort
           </button>

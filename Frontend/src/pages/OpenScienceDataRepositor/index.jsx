@@ -126,7 +126,7 @@ export default function OpenScienceDataRepositorPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O Open Science Data Repository faz parte do movimento de ciência aberta da NASA e existe para compartilhar conjuntos de dados científicos produzidos ou financiados pela agência. O sistema busca reduzir barreiras entre pesquisa institucional e comunidade científica, permitindo que universidades, laboratórios e desenvolvedores reutilizem dados oficiais. Sua API oferece acesso estruturado a datasets variados, incentivando transparência, reprodutibilidade científica e colaboração internacional.</p>
+          <p className="text-white/60 text-lg">O Open Science Data Repository faz parte do movimento de ciência aberta da NASA e existe para compartilhar conjuntos de dados científicos produzidos ou financiados pela agência. O sistema busca reduzir barreiras entre pesquisa institucional e comunidade científica, permitindo que universidades, laboratórios e desenvolvedores reutilizem dados oficiais. Sua API oferece acesso estruturado a datasets variados, incentivando transparência, reprodutibilidade científica e colaboração internacional.</p>
           <button onClick={() => navigate('/osdr/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar OSDR
           </button>
