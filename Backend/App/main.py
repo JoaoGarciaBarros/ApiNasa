@@ -1,20 +1,17 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from .routes import nasa  # importa o router nasa.py
 
-from App.routes.nasa import router as nasa_router
-
-app = FastAPI()
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+app = FastAPI(
+    title="NASA API Wrapper",
+    description="Endpoints centralizados para serviços da NASA",
+    version="1.0.0",
 )
-#As rotas
-app.include_router(nasa_router)
 
+# inclui todas as rotas do nasa.py
+app.include_router(nasa.router)
+
+
+# rota raiz opcional
 @app.get("/")
 async def root():
-    return {"message": "Welcome to the NASA API!"}
+    return {"message": "API da NASA está rodando 🚀"}
