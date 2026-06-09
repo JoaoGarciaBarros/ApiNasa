@@ -352,7 +352,7 @@ export default function EONETPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">A EONET foi criada para acompanhar eventos naturais em andamento ao redor do planeta usando dados de observação da Terra. O sistema reúne informações sobre incêndios florestais, erupções vulcânicas, tempestades, enchentes e outros fenômenos monitorados por satélites e organizações parceiras. Seu objetivo é centralizar dados dispersos e facilitar a visualização de eventos naturais quase em tempo real. A API é usada por pesquisadores, sistemas ambientais e projetos educativos ligados a monitoramento climático e desastres naturais.</p>
+          <p className="text-white/60 text-lg">A EONET foi criada para acompanhar eventos naturais em andamento ao redor do planeta usando dados de observação da Terra. O sistema reúne informações sobre incêndios florestais, erupções vulcânicas, tempestades, enchentes e outros fenômenos monitorados por satélites e organizações parceiras. Seu objetivo é centralizar dados dispersos e facilitar a visualização de eventos naturais quase em tempo real. A API é usada por pesquisadores, sistemas ambientais e projetos educativos ligados a monitoramento climático e desastres naturais.</p>
           <button onClick={() => navigate('/eonet/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar EONET
           </button>

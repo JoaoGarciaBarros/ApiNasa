@@ -1864,7 +1864,7 @@ export default function InsightPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">A InSight Mars Weather Service foi criada para divulgar os dados meteorológicos coletados pela missão InSight em Marte. O serviço reúne medições de temperatura, vento, pressão atmosférica e condições ambientais do planeta vermelho. Seu principal objetivo é transformar dados científicos da missão em informações acessíveis, permitindo acompanhar o clima marciano e apoiar pesquisas relacionadas à atmosfera e futuras missões humanas. Mesmo após o encerramento da missão, a API continua sendo uma importante fonte histórica sobre Marte.</p>
+          <p className="text-white/60 text-lg">A InSight Mars Weather Service foi criada para divulgar os dados meteorológicos coletados pela missão InSight em Marte. O serviço reúne medições de temperatura, vento, pressão atmosférica e condições ambientais do planeta vermelho. Seu principal objetivo é transformar dados científicos da missão em informações acessíveis, permitindo acompanhar o clima marciano e apoiar pesquisas relacionadas à atmosfera e futuras missões humanas. Mesmo após o encerramento da missão, a API continua sendo uma importante fonte histórica sobre Marte.</p>
           <button onClick={() => navigate('/insight/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar Insight
           </button>

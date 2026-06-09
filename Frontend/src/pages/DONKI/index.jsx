@@ -678,7 +678,9 @@ export default function DONKIpage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-10">
       <h1 className="text-2xl font-semibold text-white mb-8 text-center">DONKI — Space Weather Database Of Notifications, Knowledge, Information</h1>
-      <h2 className="text-center text-xl font-medium text-white shrink-0 flex-1">A DONKI é a plataforma da NASA dedicada ao clima espacial, reunindo informações sobre atividades solares que podem afetar satélites, comunicações e infraestrutura tecnológica. Ela centraliza registros de fenômenos como explosões solares, ejeções de massa coronal e tempestades geomagnéticas, transformando observações científicas em dados acessíveis. O sistema surgiu porque a atividade do Sol influencia diretamente tecnologias modernas e missões espaciais, tornando o monitoramento espacial uma necessidade operacional e científica.</h2>
+      <div className="w-full max-w-4xl flex items-center gap-4 mb-8">
+      <h2 className="text-center text-lg text-white shrink-0 flex-1">A DONKI é a plataforma da NASA dedicada ao clima espacial, reunindo informações sobre atividades solares que podem afetar satélites, comunicações e infraestrutura tecnológica. Ela centraliza registros de fenômenos como explosões solares, ejeções de massa coronal e tempestades geomagnéticas, transformando observações científicas em dados acessíveis. O sistema surgiu porque a atividade do Sol influencia diretamente tecnologias modernas e missões espaciais, tornando o monitoramento espacial uma necessidade operacional e científica.</h2>
+      </div>
       <div className="w-full max-w-4xl flex items-center gap-4 mt-12 mb-4">
         <div className="flex-1 h-px bg-white/15"></div>
         
@@ -692,7 +694,7 @@ export default function DONKIpage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">A CME registra ejeções de massa coronal, grandes explosões de plasma e campo magnético liberadas pelo Sol. Esses eventos podem viajar pelo espaço e afetar o ambiente terrestre, causando perturbações em satélites e comunicações. O sistema existe para monitorar e documentar essas ocorrências de forma organizada.</p>
+          <p className="text-white/60 text-lg">A CME registra ejeções de massa coronal, grandes explosões de plasma e campo magnético liberadas pelo Sol. Esses eventos podem viajar pelo espaço e afetar o ambiente terrestre, causando perturbações em satélites e comunicações. O sistema existe para monitorar e documentar essas ocorrências de forma organizada.</p>
           <button onClick={() => navigate('/donki/cme')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI CME
           </button>
@@ -720,8 +722,8 @@ export default function DONKIpage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O CME Analysis complementa os registros de CME trazendo análises calculadas sobre direção, velocidade e possível trajetória das ejeções solares. Seu objetivo é transformar observações brutas em previsões mais úteis para pesquisadores e operações espaciais, ajudando a estimar impactos no espaço próximo da Terra.</p>
-          <button onClick={() => navigate('/donki/cmeanalysis')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <p className="text-white/60 text-lg">O CME Analysis complementa os registros de CME trazendo análises calculadas sobre direção, velocidade e possível trajetória das ejeções solares. Seu objetivo é transformar observações brutas em previsões mais úteis para pesquisadores e operações espaciais, ajudando a estimar impactos no espaço próximo da Terra.</p>
+          <button onClick={() => navigate('/donki/analysis')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI CME Analysis
           </button>
         </div>
@@ -740,7 +742,7 @@ export default function DONKIpage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O GST monitora tempestades geomagnéticas, fenômenos causados pela interação entre atividade solar e o campo magnético terrestre. Essas tempestades podem interferir em redes elétricas, GPS e satélites. O serviço organiza eventos históricos e atuais para estudo e monitoramento operacional.</p>
+          <p className="text-white/60 text-lg">O GST monitora tempestades geomagnéticas, fenômenos causados pela interação entre atividade solar e o campo magnético terrestre. Essas tempestades podem interferir em redes elétricas, GPS e satélites. O serviço organiza eventos históricos e atuais para estudo e monitoramento operacional.</p>
           <button onClick={() => navigate('/donki/gst')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI GST
           </button>
@@ -768,7 +770,7 @@ export default function DONKIpage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O IPS registra ondas de choque interplanetárias geradas por atividade solar intensa. Essas perturbações viajam pelo Sistema Solar e podem alterar o ambiente espacial ao redor da Terra e de espaçonaves. A sub-API existe para acompanhar eventos que ajudam a entender a propagação da energia solar pelo espaço.</p>
+          <p className="text-white/60 text-lg">O IPS registra ondas de choque interplanetárias geradas por atividade solar intensa. Essas perturbações viajam pelo Sistema Solar e podem alterar o ambiente espacial ao redor da Terra e de espaçonaves. A sub-API existe para acompanhar eventos que ajudam a entender a propagação da energia solar pelo espaço.</p>
           <button onClick={() => navigate('/donki/ips')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI IPS
           </button>
@@ -788,7 +790,7 @@ export default function DONKIpage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O FLR é dedicado às explosões solares conhecidas como flares. Esses eventos liberam grandes quantidades de radiação e podem impactar comunicações e operações espaciais. O sistema documenta intensidade, duração e classificação das explosões solares observadas.</p>
+          <p className="text-white/60 text-lg">O FLR é dedicado às explosões solares conhecidas como flares. Esses eventos liberam grandes quantidades de radiação e podem impactar comunicações e operações espaciais. O sistema documenta intensidade, duração e classificação das explosões solares observadas.</p>
           <button onClick={() => navigate('/donki/flr')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI FLR
           </button>
@@ -816,7 +818,7 @@ export default function DONKIpage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O SEP acompanha partículas altamente energéticas liberadas pelo Sol durante eventos intensos. Essas partículas representam risco para astronautas, satélites e equipamentos espaciais sensíveis. O serviço existe para registrar e estudar episódios de radiação solar elevada.</p>
+          <p className="text-white/60 text-lg">O SEP acompanha partículas altamente energéticas liberadas pelo Sol durante eventos intensos. Essas partículas representam risco para astronautas, satélites e equipamentos espaciais sensíveis. O serviço existe para registrar e estudar episódios de radiação solar elevada.</p>
           <button onClick={() => navigate('/donki/sep')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI SEP
           </button>
@@ -836,7 +838,7 @@ export default function DONKIpage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O MPC monitora cruzamentos da magnetopausa, a fronteira entre o campo magnético terrestre e o vento solar. Alterações nessa região ajudam pesquisadores a entender como a Terra reage à atividade solar e como energia externa influencia o ambiente espacial próximo.</p>
+          <p className="text-white/60 text-lg">O MPC monitora cruzamentos da magnetopausa, a fronteira entre o campo magnético terrestre e o vento solar. Alterações nessa região ajudam pesquisadores a entender como a Terra reage à atividade solar e como energia externa influencia o ambiente espacial próximo.</p>
           <button onClick={() => navigate('/donki/mpc')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI MPC
           </button>
@@ -864,7 +866,7 @@ export default function DONKIpage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O RBE registra intensificações nos cinturões de radiação da Terra. Esses aumentos podem elevar o risco para satélites e sistemas eletrônicos em órbita. A sub-API foi criada para acompanhar mudanças no ambiente de radiação espacial e apoiar estudos de segurança orbital.</p>
+          <p className="text-white/60 text-lg">O RBE registra intensificações nos cinturões de radiação da Terra. Esses aumentos podem elevar o risco para satélites e sistemas eletrônicos em órbita. A sub-API foi criada para acompanhar mudanças no ambiente de radiação espacial e apoiar estudos de segurança orbital.</p>
           <button onClick={() => navigate('/donki/rbe')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI RBE
           </button>
@@ -884,7 +886,7 @@ export default function DONKIpage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O HSS documenta correntes rápidas de vento solar originadas em regiões específicas do Sol. Essas correntes podem desencadear perturbações geomagnéticas e alterar o clima espacial. O sistema permite acompanhar sua origem e influência sobre a Terra.</p>
+          <p className="text-white/60 text-lg">O HSS documenta correntes rápidas de vento solar originadas em regiões específicas do Sol. Essas correntes podem desencadear perturbações geomagnéticas e alterar o clima espacial. O sistema permite acompanhar sua origem e influência sobre a Terra.</p>
           <button onClick={() => navigate('/donki/hss')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI HSS
           </button>
@@ -912,7 +914,7 @@ export default function DONKIpage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">Essa sub-API reúne simulações produzidas pelos modelos WSA e Enlil, usados para prever propagação do vento solar e eventos solares pelo espaço. Em vez de apenas registrar observações, ela fornece projeções computacionais utilizadas em previsão de clima espacial.</p>
+          <p className="text-white/60 text-lg">Essa sub-API reúne simulações produzidas pelos modelos WSA e Enlil, usados para prever propagação do vento solar e eventos solares pelo espaço. Em vez de apenas registrar observações, ela fornece projeções computacionais utilizadas em previsão de clima espacial.</p>
           <button onClick={() => navigate('/donki/wsa')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI WSA + Enlil
           </button>
@@ -932,7 +934,7 @@ export default function DONKIpage() {
       <div className="flex flex-row gap-8 w-full max-w-4xl items-start">
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O Notifications centraliza alertas e notificações emitidos pela DONKI sobre eventos espaciais relevantes. Seu objetivo é facilitar o acompanhamento rápido de atividades importantes sem exigir análise manual de múltiplos registros.</p>
+          <p className="text-white/60 text-lg">O Notifications centraliza alertas e notificações emitidos pela DONKI sobre eventos espaciais relevantes. Seu objetivo é facilitar o acompanhamento rápido de atividades importantes sem exigir análise manual de múltiplos registros.</p>
           <button onClick={() => navigate('/donki/notifications')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI Notifications
           </button>

@@ -17,7 +17,7 @@ export default function GIBSPage() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <p className="text-white/40 text-lg">O GIBS foi desenvolvido para facilitar o acesso rápido a imagens globais produzidas por satélites de observação da Terra. Em vez de exigir download e processamento de arquivos científicos pesados, o sistema entrega imagens já organizadas e prontas para visualização. Ele é amplamente usado em mapas interativos e aplicações ambientais, permitindo acompanhar incêndios, nuvens, gelo polar e outros fenômenos terrestres. O objetivo do GIBS é tornar dados complexos mais acessíveis para pesquisadores, governos e público geral.</p>
+          <p className="text-white/60 text-lg">O GIBS foi desenvolvido para facilitar o acesso rápido a imagens globais produzidas por satélites de observação da Terra. Em vez de exigir download e processamento de arquivos científicos pesados, o sistema entrega imagens já organizadas e prontas para visualização. Ele é amplamente usado em mapas interativos e aplicações ambientais, permitindo acompanhar incêndios, nuvens, gelo polar e outros fenômenos terrestres. O objetivo do GIBS é tornar dados complexos mais acessíveis para pesquisadores, governos e público geral.</p>
           <button onClick={() => navigate('/gibs/test')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar GIBS
           </button>
