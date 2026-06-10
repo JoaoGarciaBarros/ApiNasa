@@ -1,26 +1,26 @@
 from fastapi import APIRouter
-from ...services.Apod_get.teste import get_apod
-from ...services.Gibs_get.teste import get_gibs
-from ...services.Image_library_get.teste import get_image_library
-from ...services.Insight_get.teste import (
+from services.Apod_get.teste import get_apod
+from services.Gibs_get.teste import get_gibs
+from services.Image_library_get.teste import get_image_library
+from services.Insight_get.teste import (
     get_insight,
     get_insight_assest,
     get_insight_metadata,
     get_insight_caption,
 )
-from ...services.Asteroids_get.teste import (
+from services.Asteroids_get.teste import (
     get_asteroid_feed,
     get_asteroid_lookup,
     get_asteroid_browse,
 )
-from ...services.Cneos_get.teste import (
+from services.Cneos_get.teste import (
     get_cneos,
     get_cneos_nhats,
     get_cneos_scout,
     get_cneos_sentry,
     get_mission_design,
 )
-from ...services.Donki_get.teste import (
+from services.Donki_get.teste import (
     get_donki_cme,
     get_donki_analysis,
     get_donki_gst,
@@ -33,20 +33,20 @@ from ...services.Donki_get.teste import (
     get_donki_wsa_enlil_simulation,
     get_donki_notification,
 )
-from ...services.Epic_get.teste import get_epic
-from ...services.Exoplanet_get.teste import get_exoplanet
-from ...services.Techtransfer_get.teste import get_tech_transfer
-from ...services.Tleapi_get.teste import get_tle_api
-from ...services.OpenScienceDataRepositor_get.teste import get_osdr
-from ...services.Nasatrek_get.teste import get_nasatrek
-from ...services.Techport_get.teste import get_techport
+from services.Epic_get.teste import get_epic
+from services.Exoplanet_get.teste import get_exoplanet
+from services.Techtransfer_get.teste import get_tech_transfer
+from services.Tleapi_get.teste import get_tle_api
+from services.OpenScienceDataRepositor_get.teste import get_osdr
+from services.Nasatrek_get.teste import get_nasatrek
+from services.Techport_get.teste import get_techport
 
 router = APIRouter(prefix="/nasa", tags=["NASA"])
 
 
-# Exemplos de rotas com parâmetros refletidos
 @router.get("/apod")
-async def apod_route(date: str):
+async def apod_route(
+    date: str):
     return await get_apod(date)
 
 
@@ -81,7 +81,8 @@ async def insight_caption_route(nasa_id: str):
 
 
 @router.get("/asteroid-feed")
-async def asteroid_feed_route(date: str):
+async def asteroid_feed_route(
+    date: str):
     return await get_asteroid_feed(date)
 
 

@@ -1,19 +1,26 @@
-export function getApod() {
-  // TODO: integrar via endpoint do backend
-  return Promise.resolve(null)
+const BASE = '/nasa'
+
+async function request(path) {
+  const res = await fetch(BASE + path)
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(text || `Erro ${res.status}`)
+  }
+  return res.json()
 }
 
-export function getMarsRover() {
-  // TODO: integrar via endpoint do backend
-  return Promise.resolve(null)
+export function getApod(date) {
+  return request(`/apod?date=${date}`)
 }
 
-export function getAsteroids() {
-  // TODO: integrar via endpoint do backend
-  return Promise.resolve(null)
+export function getAsteroidFeed(date) {
+  return request(`/asteroid-feed?date=${date}`)
 }
 
-export function getEarthEvents() {
-  // TODO: integrar via endpoint do backend
-  return Promise.resolve(null)
+export function getAsteroidLookup(asteroidId) {
+  return request(`/asteroid-lookup?asteroid_id=${asteroidId}`)
+}
+
+export function getAsteroidBrowse() {
+  return request('/asteroid-browse')
 }

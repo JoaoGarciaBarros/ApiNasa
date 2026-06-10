@@ -1,7 +1,16 @@
-# How to run
+## Frontend
 
-    install react
-    cmd /c "cd frontend && npm install"      
+### 1. Instalar dependências
 
-    Run Front
-    cmd /c "cd Frontend && npm run dev"
+```bash
+cd Frontend
+npm install
+```
+
+### 2. Rodar
+
+```bash
+npm run dev
+```
+
+O Front roda em: http://localhost:5173

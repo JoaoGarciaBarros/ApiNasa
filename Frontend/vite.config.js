@@ -6,4 +6,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react-tsparticles', 'tsparticles-slim'],
   },
+  server: {
+    proxy: {
+      '/nasa': 'http://localhost:8000',
+    },
+  },
 })

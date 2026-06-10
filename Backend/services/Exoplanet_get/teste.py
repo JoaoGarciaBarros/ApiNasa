@@ -28,5 +28,3 @@ async def get_exoplanet(date: str):
         response = await client.get(url, params=params)
         response.raise_for_status()
         return response.json()
-
-    # GIBS (NÃO ESTA CERTO )
