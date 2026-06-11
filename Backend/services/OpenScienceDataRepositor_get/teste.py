@@ -15,13 +15,10 @@ from App.config import (
 )
 
 
-async def get_osdr(date: str):
-    url = f"https://osdr.nasa.gov/osdr/data/osd/files/"
-    params = {
-        "OSD_STUDY_ID": None,
-    }
+async def get_osdr(study_id: str):
+    url = f"https://osdr.nasa.gov/osdr/data/osd/files/{study_id}"
 
     async with httpx.AsyncClient() as client:
-        response = await client.get(url, params=params)
+        response = await client.get(url)
         response.raise_for_status()
         return response.json()

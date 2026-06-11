@@ -63,7 +63,7 @@ export function AsteroidLookup() {
 
       <div className="flex gap-4 items-center flex-col">
         <div className="flex items-center flex-col">
-          <h2 className="text-xl font-semibold text-white">asteroidId</h2>
+          <h2 className="text-xl font-semibold text-white">asteroid_id</h2>
           <input
             type="text"
             inputMode="numeric"

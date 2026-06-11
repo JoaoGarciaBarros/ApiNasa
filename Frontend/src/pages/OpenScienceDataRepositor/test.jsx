@@ -3,7 +3,7 @@ import JsonBlock from '../../components/ui/JsonBlock'
 import { getOsdr } from '../../services/nasaClient'
 
 export default function OSDRTest() {
-  const [studyId, setStudyId] = useState('OSD-87')
+  const [studyId, setStudyId] = useState('87')
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -31,7 +31,7 @@ export default function OSDRTest() {
             type="text"
             value={studyId}
             onChange={e => setStudyId(e.target.value)}
-            placeholder="ex: OSD-87"
+            placeholder="ex: 87"
             className="bg-black text-white border border-white/50 rounded px-3 py-2 w-64"
           />
         </div>

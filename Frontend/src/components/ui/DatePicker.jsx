@@ -27,15 +27,37 @@ function toBR(date) {
   return `${d}/${m}/${y}`
 }
 
+function parseBR(str) {
+  const match = str.trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/)
+  if (!match) return null
+  const [, d, m, y] = match.map(Number)
+  const date = new Date(y, m - 1, d)
+  if (date.getFullYear() !== y || date.getMonth() !== m - 1 || date.getDate() !== d) return null
+  return date
+}
+
 export default function DatePicker({ value, onChange, className = '' }) {
   const [open, setOpen] = useState(false)
   const selected = toDateValue(value)
   const [viewDate, setViewDate] = useState(selected || new Date())
+  const [text, setText] = useState(toBR(selected))
   const ref = useRef(null)
 
   useEffect(() => {
     if (selected) setViewDate(selected)
+    setText(toBR(selected))
   }, [value])
+
+  function commitText(str) {
+    const date = parseBR(str)
+    if (date) {
+      onChange(toISO(date))
+    } else if (str.trim() === '') {
+      onChange('')
+    } else {
+      setText(toBR(selected))
+    }
+  }
 
   useEffect(() => {
     function handleClickOutside(e) {
@@ -77,17 +99,34 @@ export default function DatePicker({ value, onChange, className = '' }) {
 
   return (
     <div className="relative" ref={ref}>
-      <button
-        type="button"
-        onClick={() => setOpen(o => !o)}
-        className={`flex items-center justify-between gap-3 bg-black text-white border border-white/50 rounded px-3 py-2 cursor-pointer hover:border-white focus:outline-none focus:ring-1 focus:ring-white/50 transition-colors ${className}`}
+      <div
+        className={`flex items-center justify-between gap-3 bg-black text-white border border-white/50 rounded px-3 py-2 hover:border-white focus-within:outline-none focus-within:ring-1 focus-within:ring-white/50 transition-colors ${className}`}
       >
-        <span>{toBR(selected) || 'dd/mm/aaaa'}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
-          <rect x="3" y="4" width="18" height="18" rx="2" />
-          <path d="M16 2v4M8 2v4M3 10h18" />
-        </svg>
-      </button>
+        <input
+          type="text"
+          value={text}
+          onChange={e => setText(e.target.value)}
+          onBlur={e => commitText(e.target.value)}
+          onKeyDown={e => {
+            if (e.key === 'Enter') {
+              commitText(e.currentTarget.value)
+              setOpen(false)
+            }
+          }}
+          placeholder="dd/mm/aaaa"
+          className="bg-transparent outline-none w-full placeholder:text-white/50"
+        />
+        <button
+          type="button"
+          onClick={() => setOpen(o => !o)}
+          className="shrink-0 cursor-pointer"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <path d="M16 2v4M8 2v4M3 10h18" />
+          </svg>
+        </button>
+      </div>
 
       {open && (
         <div className="absolute z-50 mt-2 w-64 bg-black border border-white rounded-lg p-3 shadow-lg text-white">

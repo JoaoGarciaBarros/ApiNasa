@@ -262,8 +262,8 @@ async def tle_route(query: str):
 
 
 @router.get("/osdr")
-async def osdr_route(date: str):
-    return await get_osdr(date)
+async def osdr_route(study_id: str):
+    return await get_osdr(study_id)
 
 
 @router.get("/nasatrek")

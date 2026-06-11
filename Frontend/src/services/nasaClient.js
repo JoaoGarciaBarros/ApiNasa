@@ -125,7 +125,7 @@ export function getInsightCaption(nasaId) {
 }
 
 export function getOsdr(studyId) {
-  return request(`/osdr?date=${encodeURIComponent(studyId)}`)
+  return request(`/osdr?study_id=${encodeURIComponent(studyId)}`)
 }
 
 export function getNasatrek(query) {
