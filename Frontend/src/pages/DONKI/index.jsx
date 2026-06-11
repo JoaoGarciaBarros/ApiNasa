@@ -935,7 +935,7 @@ export default function DONKIpage() {
 
         <div className="flex-1 flex flex-col">
           <p className="text-white/60 text-lg">O Notifications centraliza alertas e notificações emitidos pela DONKI sobre eventos espaciais relevantes. Seu objetivo é facilitar o acompanhamento rápido de atividades importantes sem exigir análise manual de múltiplos registros.</p>
-          <button onClick={() => navigate('/donki/notifications')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
+          <button onClick={() => navigate('/donki/notification')} className="self-center bg-black text-white font-bold py-2 px-4 rounded border border-white/50 mt-4 hover:bg-white/10 transition-colors duration-100">
             Testar DONKI Notifications
           </button>
         </div>

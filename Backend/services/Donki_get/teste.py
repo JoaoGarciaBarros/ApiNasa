@@ -161,6 +161,11 @@ async def get_donki_wsa_enlil_simulation(date: str):
         "end_date": date,
     }
 
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url, params=params)
+        response.raise_for_status()
+        return response.json()
+
 
 async def get_donki_notification(date: str):
     url = f"{NASA_BASE_URL}/DONKI/Notifications"

@@ -54,6 +54,19 @@ async def get_cneos(date: str):
         return response.json()
 
 
+async def get_cneos_fireball(date: str):
+    url = f"https://ssd-api.jpl.nasa.gov/fireball.api"
+    params = {
+        "date-min": date,
+    }
+    params = {k: v for k, v in params.items() if v is not None}
+
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url, params=params)
+        response.raise_for_status()
+        return response.json()
+
+
 async def get_cneos_nhats(date: str):
     url = f"https://ssd-api.jpl.nasa.gov/nhats.api"
     params = {
@@ -104,8 +117,8 @@ async def get_cneos_scout(date: str):
 async def get_cneos_sentry(date: str):
     url = f"https://ssd-api.jpl.nasa.gov/sentry.api"
     params = {
-        "spk": int,
-        "des": string,
+        "spk": None,  # int/string
+        "des": None,  # string
         "h-max": None,  # float
         "ps-min": None,  # float
         "ip-min": None,  # float

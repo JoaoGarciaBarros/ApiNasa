@@ -10,7 +10,6 @@ router = APIRouter()
 import httpx
 
 from App.config import (
-    NASA_API_KEY,
     NASA_BASE_URL,
 )
 
@@ -18,7 +17,6 @@ from App.config import (
 async def get_image_library(date: str):
     url = f"https://images-api.nasa.gov/search"
     params = {
-        "api_key": NASA_API_KEY,
         "q": date,
         "center": None,
         "description": None,

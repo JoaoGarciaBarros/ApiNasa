@@ -15,6 +15,7 @@ from services.Asteroids_get.teste import (
 )
 from services.Cneos_get.teste import (
     get_cneos,
+    get_cneos_fireball,
     get_cneos_nhats,
     get_cneos_scout,
     get_cneos_sentry,
@@ -40,6 +41,7 @@ from services.Tleapi_get.teste import get_tle_api
 from services.OpenScienceDataRepositor_get.teste import get_osdr
 from services.Nasatrek_get.teste import get_nasatrek
 from services.Techport_get.teste import get_techport
+from services.SatelliteSituationCenter_get.teste import get_ssc
 
 router = APIRouter(prefix="/nasa", tags=["NASA"])
 
@@ -66,8 +68,8 @@ async def insight_route(date: str):
 
 
 @router.get("/insight-assest")
-async def insight_assest_route(date: str):
-    return await get_insight_assest(date)
+async def insight_assest_route(nasa_id: str):
+    return await get_insight_assest(nasa_id)
 
 
 @router.get("/insight-metadata")
@@ -99,6 +101,11 @@ async def asteroid_browse_route():
 @router.get("/cneos")
 async def cneos_route(date: str):
     return await get_cneos(date)
+
+
+@router.get("/cneos-fireball")
+async def cneos_fireball_route(date: str):
+    return await get_cneos_fireball(date)
 
 
 @router.get("/cneos-nhats")
@@ -174,6 +181,56 @@ async def donki_cme_route(date: str):
     return await get_donki_cme(date)
 
 
+@router.get("/donki-analysis")
+async def donki_analysis_route(date: str):
+    return await get_donki_analysis(date)
+
+
+@router.get("/donki-gst")
+async def donki_gst_route(date: str):
+    return await get_donki_gst(date)
+
+
+@router.get("/donki-ips")
+async def donki_ips_route(date: str):
+    return await get_donki_ips(date)
+
+
+@router.get("/donki-flr")
+async def donki_flr_route(date: str):
+    return await get_donki_flr(date)
+
+
+@router.get("/donki-sep")
+async def donki_sep_route(date: str):
+    return await get_donki_sep(date)
+
+
+@router.get("/donki-mpc")
+async def donki_mpc_route(date: str):
+    return await get_donki_mpc(date)
+
+
+@router.get("/donki-rbe")
+async def donki_rbe_route(date: str):
+    return await get_donki_rbe(date)
+
+
+@router.get("/donki-hss")
+async def donki_hss_route(date: str):
+    return await get_donki_hss(date)
+
+
+@router.get("/donki-wsa-enlil")
+async def donki_wsa_enlil_route(date: str):
+    return await get_donki_wsa_enlil_simulation(date)
+
+
+@router.get("/donki-notification")
+async def donki_notification_route(date: str):
+    return await get_donki_notification(date)
+
+
 @router.get("/epic")
 async def epic_route(date: str):
     return await get_epic(date)
@@ -207,3 +264,8 @@ async def nasatrek_route(date: str):
 @router.get("/techport")
 async def techport_route(date: str):
     return await get_techport(date)
+
+
+@router.get("/ssc")
+async def ssc_route():
+    return await get_ssc()

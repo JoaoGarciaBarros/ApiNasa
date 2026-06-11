@@ -29,16 +29,11 @@ async def get_insight(date: str):
         return response.json()
 
 
-async def get_insight_assest(date: str):
-    url = f"https://images-api.nasa.gov/asset/"
-    params = {
-        "api_key": NASA_API_KEY,
-        "feedtype": "json",
-        "version": "1.0",
-    }
+async def get_insight_assest(nasa_id: str):
+    url = f"https://images-api.nasa.gov/asset/{nasa_id}"
 
     async with httpx.AsyncClient() as client:
-        response = await client.get(url, params=params)
+        response = await client.get(url)
         response.raise_for_status()
         return response.json()
 

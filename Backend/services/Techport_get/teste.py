@@ -1,19 +1,13 @@
-from datetime import date
-from itertools import count
-import string
-import asyncio
-
-from fastapi import APIRouter
-
-router = APIRouter()
-
 import httpx
-
-from App.config import (
-    NASA_API_KEY,
-    NASA_BASE_URL,
-)
 
 
 async def get_techport(date: str):
-    url = f"https://techport.nasa.gov/help/api"
+    url = "https://techport.nasa.gov/api/projects"
+    params = {
+        "updatedSince": date,
+    }
+
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url, params=params)
+        response.raise_for_status()
+        return response.json()

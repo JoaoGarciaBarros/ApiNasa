@@ -19,9 +19,6 @@ async def get_osdr(date: str):
     url = f"https://osdr.nasa.gov/osdr/data/osd/files/"
     params = {
         "OSD_STUDY_ID": None,
-        "CURRENT_PAGE_NUMBER": None,
-        "RESULTS_PER_PAGE": None,
-        "ALL_FILES": None,
     }
 
     async with httpx.AsyncClient() as client:
