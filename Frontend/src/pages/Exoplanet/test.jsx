@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import DatePicker from '../../components/ui/DatePicker'
 import JsonBlock from '../../components/ui/JsonBlock'
 import { getExoplanet } from '../../services/nasaClient'
 
@@ -28,12 +29,7 @@ export default function ExoplanetTest() {
       <div className="flex gap-4 items-center flex-col">
         <div className="flex items-center flex-col">
           <h2 className="text-xl font-semibold text-white">disc_pubdate</h2>
-          <input
-            type="date"
-            value={date}
-            onChange={e => setDate(e.target.value)}
-            className="bg-black text-white border border-white/50 rounded px-3 py-2"
-          />
+          <DatePicker value={date} onChange={setDate} />
         </div>
         <button
           onClick={handleFetch}

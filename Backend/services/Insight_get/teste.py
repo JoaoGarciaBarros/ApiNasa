@@ -39,24 +39,18 @@ async def get_insight_assest(nasa_id: str):
 
 
 async def get_insight_metadata(nasa_id: str):
-    url = f"https://images-api.nasa.gov/metadata/"
-    params = {
-        "NASA_ID": nasa_id,
-    }
+    url = f"https://images-api.nasa.gov/metadata/{nasa_id}"
 
     async with httpx.AsyncClient() as client:
-        response = await client.get(url, params=params)
+        response = await client.get(url)
         response.raise_for_status()
         return response.json()
 
 
 async def get_insight_caption(nasa_id: str):
-    url = f"https://images-api.nasa.gov/caption/"
-    params = {
-        "NASA_ID": nasa_id,
-    }
+    url = f"https://images-api.nasa.gov/captions/{nasa_id}"
 
     async with httpx.AsyncClient() as client:
-        response = await client.get(url, params=params)
+        response = await client.get(url)
         response.raise_for_status()
         return response.json()

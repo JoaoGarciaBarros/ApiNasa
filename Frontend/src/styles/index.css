@@ -40,3 +40,7 @@ body {
 .json-scroll::-webkit-scrollbar-button {
   display: none;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}

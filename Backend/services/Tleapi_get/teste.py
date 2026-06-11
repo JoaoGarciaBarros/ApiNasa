@@ -16,11 +16,13 @@ from App.config import (
 
 
 async def get_tle_api(query: str):
-    url = "http://tle.ivanstanojevic.me/api/tle"
+    url = "https://tle.ivanstanojevic.me/api/tle"
 
     params = {"search": query}
 
-    async with httpx.AsyncClient() as client:
+    headers = {"User-Agent": "curl/8.0"}
+
+    async with httpx.AsyncClient(follow_redirects=True, headers=headers) as client:
         response = await client.get(url, params=params)
         response.raise_for_status()
         return response.json()

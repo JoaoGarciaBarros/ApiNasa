@@ -16,12 +16,14 @@ from App.config import (
 
 
 async def get_exoplanet(date: str):
-    url = "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI"
+    url = "https://exoplanetarchive.ipac.caltech.edu/TAP/sync"
+    year = date.split("-")[0]
+    query = (
+        "select pl_name,hostname,disc_year,discoverymethod,disc_facility,pl_orbper,pl_rade,pl_bmasse "
+        f"from ps where disc_year = {year} order by pl_name"
+    )
     params = {
-        "table": "exoplanets",
-        "select": "*",
-        "where": f"disc_pubdate like '{date}%'",
-        "orderby": "disc_pubdate desc",
+        "query": query,
         "format": "json",
     }
     async with httpx.AsyncClient() as client:

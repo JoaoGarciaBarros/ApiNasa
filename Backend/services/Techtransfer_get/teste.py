@@ -15,17 +15,11 @@ from App.config import (
 )
 
 
-async def get_tech_transfer(date: str):
-    url = f"{NASA_BASE_URL}/techtransfer"
-    params = {
-        "patent": None,  # string
-        "patent_issued": None,  # boolean/string
-        "software": None,  # string
-        "spinoff": None,  # string
-    }
-    params = {k: v for k, v in params.items() if v is not None}
+async def get_tech_transfer(category: str, query: str):
+    from urllib.parse import quote
+    url = f"https://technology.nasa.gov/api/query/{category}/{quote(query)}"
 
     async with httpx.AsyncClient() as client:
-        response = await client.get(url, params=params)
+        response = await client.get(url)
         response.raise_for_status()
         return response.json()

@@ -162,7 +162,6 @@ async def get_mission_design(
     url = "https://ssd-api.jpl.nasa.gov/mdesign.api"
 
     params = {
-        "mode": mode,
         "lim": lim,
         "crit": crit,
         "year": year,

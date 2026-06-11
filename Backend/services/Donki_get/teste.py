@@ -19,8 +19,8 @@ async def get_donki_cme(date: str):
     url = f"{NASA_BASE_URL}/DONKI/CME"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
     }
 
     async with httpx.AsyncClient() as client:
@@ -33,8 +33,8 @@ async def get_donki_analysis(date: str):
     url = f"{NASA_BASE_URL}/DONKI/CMEAnalysis"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
         "mostAccurateOnly": True,
         "completeEntryOnly": True,
         "speed": 0,
@@ -52,8 +52,8 @@ async def get_donki_gst(date: str):
     url = f"{NASA_BASE_URL}/DONKI/GST"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
         "mostAccurateOnly": True,
         "completeEntryOnly": True,
         "speed": 0,
@@ -71,8 +71,8 @@ async def get_donki_ips(date: str):
     url = f"{NASA_BASE_URL}/DONKI/IPS"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
         "catalog": "ALL",
         "location": "ALL",
     }
@@ -87,8 +87,8 @@ async def get_donki_flr(date: str):
     url = f"{NASA_BASE_URL}/DONKI/FLR"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
     }
 
     async with httpx.AsyncClient() as client:
@@ -101,8 +101,8 @@ async def get_donki_sep(date: str):
     url = f"{NASA_BASE_URL}/DONKI/SEP"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
     }
 
     async with httpx.AsyncClient() as client:
@@ -115,8 +115,8 @@ async def get_donki_mpc(date: str):
     url = f"{NASA_BASE_URL}/DONKI/MPC"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
     }
 
     async with httpx.AsyncClient() as client:
@@ -129,8 +129,8 @@ async def get_donki_rbe(date: str):
     url = f"{NASA_BASE_URL}/DONKI/RBE"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
     }
 
     async with httpx.AsyncClient() as client:
@@ -143,8 +143,8 @@ async def get_donki_hss(date: str):
     url = f"{NASA_BASE_URL}/DONKI/HSS"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
     }
 
     async with httpx.AsyncClient() as client:
@@ -157,8 +157,8 @@ async def get_donki_wsa_enlil_simulation(date: str):
     url = f"{NASA_BASE_URL}/DONKI/WSAEnlilSimulations"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
     }
 
     async with httpx.AsyncClient() as client:
@@ -171,8 +171,8 @@ async def get_donki_notification(date: str):
     url = f"{NASA_BASE_URL}/DONKI/Notifications"
     params = {
         "api_key": NASA_API_KEY,
-        "start_date": date,
-        "end_date": date,
+        "startDate": date,
+        "endDate": date,
         "type": "all",
     }
 

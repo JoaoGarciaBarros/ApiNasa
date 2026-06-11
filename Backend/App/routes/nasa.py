@@ -242,8 +242,18 @@ async def exoplanet_route(date: str):
 
 
 @router.get("/tech-transfer")
-async def tech_transfer_route(date: str):
-    return await get_tech_transfer(date)
+async def tech_transfer_route(
+    patent: str | None = None,
+    software: str | None = None,
+    spinoff: str | None = None,
+):
+    if patent is not None:
+        category, query = "patent", patent
+    elif software is not None:
+        category, query = "software", software
+    else:
+        category, query = "spinoff", spinoff or ""
+    return await get_tech_transfer(category, query)
 
 
 @router.get("/tle")
