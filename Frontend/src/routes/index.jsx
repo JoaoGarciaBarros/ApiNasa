@@ -21,7 +21,7 @@ import VestaPage from '../pages/Vesta/index'
 import APODTest from '../pages/APOD/test'
 import { AsteroidFeed, AsteroidLookup, AsteroidBrowse } from '../pages/Asteroids/test'
 import { CNEOSCAD, CNEOSFireball, CNEOSMissionDesign, CNEOSNHATS, CNEOSScout, CNEOSSentry } from '../pages/CNEOS/test'
-import { DONKICME, DONKICMEAnalysis, DONKIGST, DONKIIPS, DONKILFR, DONKISEP, DONKIMPC, DONKIRBE, DONKIHSS, DONKIWSA, DONKINotification } from '../pages/DONKI/test'
+import { DONKICME, DONKICMEAnalysis, DONKIGST, DONKIIPS, DONKIFLR, DONKISEP, DONKIMPC, DONKIRBE, DONKIHSS, DONKIWSA, DONKINotification } from '../pages/DONKI/test'
 import EONETTest from '../pages/EONET/test'
 import EPICTest from '../pages/EPIC/test'
 import ExoplanetTest from '../pages/Exoplanet/test'
@@ -72,7 +72,7 @@ export default function AppRoutes() {
         <Route path="/donki/analysis" element={<DONKICMEAnalysis />} />
         <Route path="/donki/gst" element={<DONKIGST />} />
         <Route path="/donki/ips" element={<DONKIIPS />} />
-        <Route path="/donki/lfr" element={<DONKILFR />} />
+        <Route path="/donki/flr" element={<DONKIFLR />} />
         <Route path="/donki/sep" element={<DONKISEP />} />
         <Route path="/donki/mpc" element={<DONKIMPC />} />
         <Route path="/donki/rbe" element={<DONKIRBE />} />

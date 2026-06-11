@@ -66,7 +66,7 @@ export function ImageLibrarySearch() {
     <TextField
       title="Image Library — Search"
       label="query"
-      placeholder="ex: apollo 11"
+      placeholder="ex: mars"
       onSearch={getImageLibrary}
     />
   )
@@ -77,7 +77,7 @@ export function ImageLibraryAsset() {
     <TextField
       title="Image Library — Asset"
       label="nasa_id"
-      placeholder="ex: PIA12235"
+      placeholder="ex: as11-40-5874"
       onSearch={getInsightAsset}
     />
   )
@@ -88,7 +88,7 @@ export function ImageLibraryMetadata() {
     <TextField
       title="Image Library — Metadata"
       label="nasa_id"
-      placeholder="ex: PIA12235"
+      placeholder="ex: as11-40-5874"
       onSearch={getInsightMetadata}
     />
   )
@@ -99,7 +99,7 @@ export function ImageLibraryCaptions() {
     <TextField
       title="Image Library — Captions"
       label="nasa_id"
-      placeholder="ex: PIA12235"
+      placeholder="ex: 172_ISS-Slosh"
       onSearch={getInsightCaption}
     />
   )

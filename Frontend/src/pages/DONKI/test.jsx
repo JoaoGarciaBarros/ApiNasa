@@ -79,7 +79,7 @@ export function DONKIIPS() {
   return <DateField title="DONKI — IPS" onSearch={getDonkiIps} />
 }
 
-export function DONKILFR() {
+export function DONKIFLR() {
   return <DateField title="DONKI — FLR" onSearch={getDonkiFlr} />
 }
 

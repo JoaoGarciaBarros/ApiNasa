@@ -69,9 +69,9 @@ export function AsteroidLookup() {
             inputMode="numeric"
             value={asteroidId}
             onChange={e => setAsteroidId(e.target.value.replace(/\D/g, "").slice(0, 7))}
-          placeholder="ID do asteroide (ex: 3542519)"
-          className="bg-black text-white border border-white/50 rounded px-3 py-2 w-64"
-        />
+            placeholder="ID do asteroide (ex: 3542519)"
+            className="bg-black text-white border border-white/50 rounded px-3 py-2 w-64"
+          />
         </div>
         <button
           onClick={() => run(asteroidId)}
